@@ -1,0 +1,290 @@
+'DTD
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<?xml version="1.1" encoding="shift-jis"?>
+<?xml version="1.1" encoding="utf-8"?>
+<?xml version="1.1" encoding=""?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+'Tag in head
+<html lang=ja><head><title></title></head><body></body></html>
+text="" link="" alink="" vlink=""
+<meta http-equiv="content-type" content="text/html; charset=shift_jis" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noindex,nofollow" />
+<meta http-equiv="content-style-type" content="text/css" link="style.css" />
+<meta http-equiv="content-style-type" content="text/javascript" />
+<meta http-equiv="pragma" content="no-cache"><meta http-equiv="cache-control" content="no-cache">
+<meta name="author" content="">
+<meta name="generator" content="">
+
+'Tag in body
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+
+<hr />
+<br />
+<marquee></marquee>
+
+<p></p>
+<p class=""></p>
+<p id=""></p>
+
+<div></div>
+<div class=""></div>
+<div id=""></div>
+
+<table><tr><td></td></tr></table>
+colspan="" 
+rowspan=""
+
+<img src="" alt="" />
+
+<blockquote></blockquote>
+<q></q>
+
+<span></span>
+<span id=""></span>
+<span class=""></span>
+
+<a href=""></a>
+<a href="" target="_blank"></a>
+<a href="" target="_blank"><img src="" alt="" /></a>
+<a name=""></a>
+<a href="mailto:xxx?subject=xxx&body=xxx"></a>
+<a href="tel:"></a>
+
+
+<font size=""></font>
+<font size="" color=""></font>
+<strong></strong>
+<b></b>
+<small></small>
+
+<ul><li></li><li></li></ul>
+<ol><li></li><li></li></ol>
+
+width=""
+bgcolor=""
+align="center"
+align="left"
+align="right"
+border=""
+accesskey=""
+<!--- --->
+style=""
+'CSS dictionary
+'property
+!important
+:active
+:first-child
+:first-letter
+:first-line
+:hover
+:link
+:visited
+@charset
+@font-face
+@import
+@media
+@page
+azimuth
+background
+background-attachment
+background-color
+background-image
+background-position
+background-repeat
+behavior: url()
+border
+border-bottom
+border-bottom-color
+border-bottom-style
+border-bottom-width
+border-collapse
+border-color
+border-left
+border-left-color
+border-left-style
+border-left-width
+border-right
+border-right-color
+border-right-style
+border-right-width
+border-spacing
+border-style
+border-top
+border-top-color
+border-top-style
+border-top-width
+border-width
+bottom
+caption-side
+clear
+clip
+color
+content
+counter-increment
+counter-reset
+cue
+cue-after
+cue-before
+cursor
+direction
+display
+elevation
+empty-cells
+filter: Alpha()
+filter: Blur()
+filter: Chroma()
+filter: DropShadow()
+filter: FlipH()
+filter: FlipV()
+filter: Glow()
+filter: Gray()
+filter: Invert()
+filter: Light()
+filter: Mask()
+filter: Shadow()
+filter: Wave()
+filter: Xray()
+float
+font
+font-family
+font-size
+font-size-adjust
+font-stretch
+font-style
+font-variant
+font-weight
+height
+ime-mode
+layout-grid
+layout-grid-char
+layout-grid-line
+layout-grid-mode
+layout-grid-type
+left
+letter-spacing
+line-break
+line-height
+list-style
+list-style-image
+list-style-position
+list-style-type
+margin
+margin-bottom
+margin-left
+margin-right
+margin-top
+marker-offset
+marks
+max-height
+max-width
+min-height
+min-width
+orphans
+outline
+outline-color
+outline-style
+outline-width
+overflow
+overflow-x
+overflow-y
+padding
+padding-bottom
+padding-left
+padding-right
+padding-top
+page
+page-break-after
+page-break-before
+page-break-inside
+pause
+pause-after
+pause-before
+pitch
+pitch-range
+play-during
+position
+quotes
+richness
+right
+ruby-align
+ruby-overhang
+ruby-position
+scrollbar-3dlight-color
+scrollbar-arrow-color
+scrollbar-base-color
+scrollbar-darkshadow-color
+scrollbar-face-color
+scrollbar-highlight-color
+scrollbar-shadow-color
+scrollbar-track-color
+size
+speak
+speak-header
+speak-numeral
+speak-punctuation
+speech-rate
+stress
+table-layout
+text-align
+text-autospace
+text-decoration
+text-indent
+text-justify
+text-kashida-space
+text-shadow
+text-transform
+text-underline-position
+top
+unicode-bidi
+vertical-align
+visibility
+voice-family
+volume
+white-space
+widows
+width
+word-break
+word-spacing
+writing-mode
+z-index
+
+'値
+thin
+medium
+thick
+none
+dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset
+inherit
+left
+right
+both
+baseline
+middle
+sub
+super
+text-top
+text-bottom
+top
+bottom
+visible
+hidden
+scroll
+auto

@@ -1,0 +1,185 @@
+# Some useful Unicode entities
+# Non-Breaking Space
+snippet div
+  <div>
+    ${1}
+	</div>
+snippet p
+  <p>${2}</p>
+snippet ul
+  <ul>
+    ${1}
+	</ul>
+snippet ol
+  <ol>
+    ${1}
+	</ol>
+snippet li
+  <li>${1}</li>
+snippet dl
+  <dl>
+    ${1}
+	</dl>
+snippet dt
+  <dt>${1}</dt>
+snippet dd
+  <dd>
+    ${1}
+  </dd>
+snippet h1
+  <h1>${1}</h1>
+snippet h2
+  <h2>${1}</h2>
+snippet h3
+  <h3>${1}</h3>
+snippet h4
+  <h4>${1}</h4>
+snippet h5
+  <h5>${1}</h5>
+snippet h6
+  <h6>${1}</h6>
+snippet a
+  <a href="${1:http://~}" title="${2:title}">${3:string}</a>
+snippet img
+  <img src=${1:htt://~}"" alt="${2:image name}" />
+snippet space
+	&nbsp;
+# Generic Doctype
+snippet xhtml
+	<?xml version="1.0" encoding="utf-8"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<meta name="keyword" content="" />
+			<meta name="description" content="" />
+		  <title>`expand('%')`</title>
+			<link type="text/css" href="css/style.css" rel="stylesheet" media="all" />
+		</head>
+		<body>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		</body>
+	</html>
+snippet html
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>`expand('%')`</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="./css/import.css">
+	</head>
+	<body id="`substitute(expand('%'), '.html$', '', '')`">
+
+		<div id="header">
+
+		<!--/#header--></div>
+
+		<div id="contents">
+
+		<!--/#contents--></div>
+
+		<div id="footer">
+
+		<!--/#footer--></div>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	</body>
+	</html>
+snippet jshtml
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>`expand('%')`</title>
+	</head>
+	<body id="`substitute(expand('%'), '.html$', '', '')`">
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./`substitute(expand('%'), '.html$', '.js', '')`" charset="utf-8"></script>
+  </body>
+	</html>
+snippet script
+	<script type="text/javascript" src="${1:name}.js"></script>
+snippet template
+	<script type="text/template" id="${1:id}">
+    ${2}
+  </script>
+snippet css
+	<style type="text/css">
+  ${1:css}
+	</style>
+snippet link
+	<link rel="stylesheet" href="/css/master.css" type="text/css" media="screen" charset="utf-8"`Close()`>${4}
+snippet meta
+	<meta name="${1:name}" content="${2:content}"`Close()`>${3}
+snippet table
+	<table>
+    ${1}
+	</table>
+snippet thead
+	<thead>
+    ${1}
+	</thead>
+snippet tbody
+	<tbody>
+    ${1}
+	</tbody>
+snippet tfoot
+	<tfoot>
+    ${1}
+	</tfoot>
+snippet tr
+  <tr>
+    ${1}
+  </tr>
+snippet th
+  <th>
+    ${1}
+  </th>
+snippet td
+  <td>
+    ${1}
+  </td>
+snippet form
+  <form id="${1:id}" method="${2:POST}" action="${3:http://~}">
+      ${4}
+	</form>
+snippet hidden
+  <input type="hidden" name="${1}" value="${2}" />
+snippet submit
+  <input type="submit" value="${1:送信}" />
+snippet input
+  <input type="text" name="${1}" value="${2}" size="${3}" />
+snippet radio
+  <input type="radio" name="${1}" value="${2}" />
+snippet checkbox
+  <input type="checkbox" name="${1}" value="${2}" />
+snippet textarea
+	<textarea name="${1}" rows="${2}" cols="${3}"></textarea>
+snippet select
+  <select name="${1}">
+    ${2}
+	</select>
+snippet option
+  <option value="${1}">${2}</option>
+snippet file
+  <input type="file" name="${1}" />
+snippet password
+  <input type="password" name="${1}" value="${2}" size="${3}" />
+snippet button
+  <button id="${1}"></button>
+snippet section
+	<section>
+    ${1}
+	</section>
+snippet article
+	<article>
+    ${1}
+	</article>
+snippet nav
+	<nav>
+    ${1}
+	</nav>

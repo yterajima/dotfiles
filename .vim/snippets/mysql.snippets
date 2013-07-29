@@ -1,0 +1,18 @@
+snippet insert
+  INSERT INTO ${1:table} (${2:id}) VALUES (${3:value})
+snippet delete
+  DELETE FROM ${1:table} WHERE ${2}
+snippet update
+  UPDATE ${1:table} SET ${2:value} WHERE ${3}
+snippet select
+  SELECT ${1:*} FROM ${2:table}
+snippet where 
+  WHERE ${1:id = ?} 
+snippet limit
+  LIMIT ${1:10}
+snippet offset
+  OFFSET ${1:10}
+snippet desc
+  ORDER BY ${1:colmun} DESC
+snippet asc
+  ORDER BY ${1:colmun} ASC

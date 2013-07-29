@@ -1,0 +1,404 @@
+﻿# CodeIgniter
+snippet cc
+	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+	class `Cucfirst(expand("%"))` extends MY_Controller {
+
+		public function __construct()
+		{
+			parent::__construct();
+		}
+
+		public function ${1:index}()
+		{
+      ${2}
+		}
+
+	}
+
+	/* End of file `expand("%")` */
+	/* Location: `CiFilePos(expand("%:p"))` */
+snippet cm
+	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+	class `Cucfirst(expand("%"))` extends MY_Model {
+
+		public function __construct()
+		{
+			parent::__construct();
+		}
+
+		public function ${1:method}()
+		{
+      ${2}
+		}
+
+  }
+
+	/* End of file `expand("%")` */
+	/* Location: `CiFilePos(expand("%:p"))` */
+snippet ctest
+	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+	/**
+	 * `expand("%")`
+	 *
+	 */
+	class `Cucfirst(expand("%"))` extends TEST_Controller {
+
+    public function __construct()
+		{
+			parent::__construct();
+		}
+
+	  public function ${1}()
+	  {
+			$test     = ${2};
+			$expected = ${3};
+
+		  $this->unit->run($test, $expected, $this->_test_name(__CLASS__, __FUNCTION__));
+  	}
+
+  ${4}
+	}
+
+	/* End of file `expand("%")` */
+	/* Location: `CiFilePos(expand("%:p"))` */
+snippet ctl
+	$this->unit->run($test, $expected, $this->_test_name(__CLASS__, __FUNCTION__));
+snippet ctf
+	public function ${1}()
+	{
+	  $test     = ${2};
+		$expected = ${3};
+
+		$this->unit->run($test, $expected, $this->_test_name(__CLASS__, __FUNCTION__));
+	}
+
+  ${4}
+snippet cclass
+	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+	class `Cucfirst(expand("%"))` {
+
+		public function __construct()
+		{
+			parent::__construct();
+		}
+
+		public function ${1:index}()
+		{
+
+		}
+
+	}
+
+	/* End of file `expand("%")` */
+	/* Location: `CiFilePos(expand("%:p"))` */
+snippet cv
+	$this->load->view('${1}');
+  ${2}
+snippet cmodel
+	$this->load->model(${1});
+  ${2}
+snippet loc
+	/* Location: `CiFilePos(expand("%:p"))` */
+snippet eof
+	/* End of file `expand("%")` */
+snippet end
+	/* End of file `expand("%")` */
+	/* Location: `CiFilePos(expand("%:p"))` */
+snippet cline
+	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+snippet wploop
+	<?php if(have_posts()):while( have_posts() ):the_post();?>
+
+		<?php the_title();?>
+
+		<?php the_content();?>
+
+	<?php endwhile; else: ?>
+	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	<?php endif; ?>
+
+snippet inc1
+	include g${1:file}';
+  g${2}'
+snippet inc
+	include_once g${1:file}';
+  g${2}'
+snippet req1
+	require g${1:file}';
+  g${2}'
+snippet req
+	require_once g${1:file}';
+  g${2}'
+# Start Docblock
+snippet /*
+	/**
+	 * g${1}'
+	 **/
+  g${2}'
+# Class - post doc
+snippet doc_cp
+	/**
+	 * undocumented class
+	 *
+	 * @package ${1:default}
+	 * @author ${2:`g:snips_author`}
+	**/
+  ${3}
+# Class Variable - post doc
+snippet doc_vp
+	/**
+	 * ${1:undocumented class variable}
+	 *
+	 * @var ${2:string}
+	 **/
+  ${3}
+# Class Variable
+snippet doc_v
+	/**
+	 * ${3:undocumented class variable}
+	 *
+	 * @var ${4:string}
+	 **/
+	${1:var} $${2};${5}
+# Class
+snippet doc_c
+	/**
+	 * ${1:undocumented class}
+	 *
+	 * @package ${2:package}
+	 * @subpackage ${3:subpackage}
+	 * @category ${4:category}
+	 * @author Yuya Terajima/e2esound.com(terra@e2esound.com)
+	 * @link http://www.e2esound.com
+	 */
+# Constant Definition - post doc
+snippet doc_dp
+	/**
+	 * ${1:undocumented constant}
+	 **/${2}
+# Constant Definition
+snippet doc_d
+	/**
+	 * ${3:undocumented constant}
+	 **/
+	define(${1}, ${2});${4}
+# Function - post doc
+snippet doc_fp
+	/**
+	 * ${1:undocumented function}
+	 *
+	 * @return ${2:void}
+	 * @author ${3:`g:snips_author`}
+	 **/${4}
+# Function signature
+snippet doc_s
+	/**
+	 * ${4:undocumented function}
+	 *
+	 * @return ${5:void}
+	 * @author ${6:`g:snips_author`}
+	 **/
+	${1}function ${2}(${3});${7}
+# Function
+snippet doc_f
+	/**
+	 * ${1:undocumented function}
+	 *
+	 * @access ${2:public}
+	 * @param  ${3:string}
+	 * @return ${4:string}
+	 */
+# Header
+snippet doc_h
+	/**
+	 * ${1}
+	 *
+	 * @author ${2:`g:snips_author`}
+	 * @version ${3:$Id$}
+	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
+	 * @package ${5:default}
+	 **/
+
+	/**
+	 * Define DocBlock
+	 *//
+# Interface
+snippet doc_i
+	/**
+	 * ${2:undocumented class}
+	 *
+	 * @package ${3:default}
+	 * @author ${4:`g:snips_author`}
+	 **/
+	interface ${1:}
+	{${5}
+	} // END interface undocumented class
+# class ...
+snippet class
+	/**
+	 * ${1}
+	 **/
+	class ${2:ClassName}
+	{
+		${3}
+		function ${4:__construct}(${5:argument})
+		{
+			${6:// code...}
+		}
+	}
+# define(...)
+snippet def
+	define('${1}'${2});${3}
+# defined(...)
+snippet def?
+	${1}defined('${2}')${3}
+snippet while
+	while (${1:/* condition */}) {
+		${2:// code...}
+	}
+# do ... while
+snippet do
+	do {
+		${2:// code... }
+	} while (${1:/* condition */});
+snippet if
+	if (${1:/* condition */}) {
+		${2:// code...}
+	}
+snippet ife
+	if (${1:/* condition */}) {
+		${2:// code...}
+	} else {
+		${3:// code...}
+	}
+	${4}
+snippet else
+	 else {
+		${1:// code...}
+	}
+snippet elseif
+	 elseif (${1:/* condition */}) {
+		${2:// code...}
+	}
+# Tertiary conditional
+snippet t
+	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
+snippet is
+	isset(${1:}) ? ${2:a} : ${3:b};${4:c}
+snippet switch
+	switch ($${1:variable}) {
+		case ${2:value}:
+			${3:// code...}
+			break;
+		${5}
+		default:
+			${4:// code...}
+			break;
+	}
+snippet case
+	case ${1:value} :
+		${2:// code...}
+		break;${3}
+snippet for
+	for ($${2:i} = 0;$$2 < ${1:count};$$2${3:++}) {
+		${4: // code...}
+	}
+snippet foreach
+	foreach ($${1:variable} as $${2:key}) {
+		${3:// code...}
+	}
+snippet fn
+	function ${1:FunctionName}(${2})
+	{
+		${3:// code...}
+	}
+
+# $... = array (...)
+snippet array
+	$${1:arrayName} = array('${2}' => ${3});${4}
+snippet xhtml
+	<?xml version="1.0" encoding="utf-8"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<meta name="keyword" content="" />
+			<meta name="description" content="" />
+			<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+			<meta http-equiv="content-style-type" content="text/css;charset=utf-8" />
+			<meta http-equiv="content-script-type" content="text/javascript;charset=utf-8" />
+			<title>`expand("%")`</title>
+			<link type="text/css" href="css/style.css" rel="stylesheet" media="all" />
+		</head>
+		<body>
+
+
+			<!--javascript-->
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+			<!--/javascript-->
+		</body>
+	</html>
+snippet saction
+	public function execute${1}()
+	{
+	}
+snippet button
+	<input type="button" value="">
+snippet html
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>`expand('%')`</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="./css/import.css">
+	</head>
+	<body id="PageName">
+		<div id="header">
+
+		<!--/#header--></div>
+		<div id="contents">
+
+		<!--/#contents--></div>
+		<div id="footer">
+
+		<!--/#footer--></div>
+	</body>
+	</html>
+snippet script
+	<script type="text/javascript">
+		${1}
+	</script>${2}
+snippet scriptsrc
+	<script type="text/javascript" src="${1}.js"></script>
+snippet css
+	<style type="text/css"">
+		${2}
+	</style>${3}
+snippet csssrc
+	<style type="text/css" src="${1}" media="${2:screen}"></style>
+#sql
+snippet insert
+  INSERT INTO ${1:table} (${2:id}) VALUES (${3:value})
+snippet delete
+  DELETE FROM ${1:table} WHERE ${2}
+snippet update
+  UPDATE ${1:table} SET ${2:value} WHERE ${3}
+snippet select
+  SELECT ${1:*} FROM ${2:table}
+snippet where
+  WHERE ${1:id = ?}
+snippet limit
+  LIMIT ${1:10}
+snippet offset
+  OFFSET ${1:10}
+snippet desc
+  ORDER BY ${1:colmun} DESC
+snippet asc
+  ORDER BY ${1:colmun} ASC
