@@ -18,7 +18,7 @@ hi NonText          guifg=#555555     guibg=black      gui=NONE      ctermfg=gra
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
 hi CursorIM         guifg=black       guibg=red         gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
 
-hi LineNr           guifg=#4D4D4D     guibg=black       gui=NONE      ctermfg=cyan    ctermbg=black        cterm=NONE
+hi LineNr           guifg=#4D4D4D     guibg=black       gui=NONE      ctermfg=yellow    ctermbg=black        cterm=NONE
 
 hi VertSplit        guifg=#202020     guibg=#222222     gui=NONE    ctermfg=darkblue    ctermbg=darkblue    cterm=NONE
 hi StatusLine       guifg=#CCCCCC     guibg=#222222     gui=NONE    ctermfg=white       ctermbg=darkblue    cterm=NONE
