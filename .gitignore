@@ -1,0 +1,9 @@
+.DS_Store
+nbproject/
+*.bak
+*.swp
+.sass-cache/
+.bundle/
+vendor/bundle
+logs/*
+logs/.gitkeep

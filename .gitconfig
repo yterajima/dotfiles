@@ -1,0 +1,44 @@
+[user]
+	name = change:your user name
+	email = change+your_email@example.jp
+[core]
+  #editor = /Applications/MacVim.app/Contents/MacOS/Vim
+  editor = change/path/to/editor
+	excludesfile = ~/.gitignore
+	pager = less -x2 -R
+	quotepath = false
+	precomposeunicode = true
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+  interactive = auto
+  grep = auto
+[merge]
+  ff = false
+  tool = vimdiff
+[pull]
+  rebase = true
+[alias]
+	h = "log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'"
+  l = "log --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'"
+  mine = "log --author=yterajima"
+  minestat = "log --stat --author=yterajima"
+  stat = "log --stat"
+  com = "commit -v"
+  amend = "commit --amend"
+  reset-author = "git commit --amend --reset-author"
+  co = "checkout"
+	cp = "cherry-pick"
+  st = "status -sb"
+  ad = "add"
+  d  = "diff"
+  dt = "difftool"
+  b  = "branch -a"
+  master = "checkout master"
+  develop = "checkout develop"
+  list = "config --list"
+  ful = "log --format=fuller"
+[push]
+  default = simple
