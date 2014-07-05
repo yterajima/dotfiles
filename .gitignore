@@ -7,3 +7,4 @@ nbproject/
 vendor/bundle
 logs/*
 logs/.gitkeep
+tmp/*
