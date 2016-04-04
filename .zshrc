@@ -215,18 +215,6 @@ REPORTTIME=3
 if type ggrep > /dev/null 2>&1; then
   alias grep=ggrep
 fi
-export GREP_OPTIONS
-GREP_OPTIONS="--binary-files=without-match"
-GREP_OPTIONS="--exclude=\*.tmp $GREP_OPTIONS"
-if grep --help | grep -q -- --exclude-dir; then
-  GREP_OPTIONS="--exclude-dir=.svn $GREP_OPTIONS"
-  GREP_OPTIONS="--exclude-dir=.git $GREP_OPTIONS"
-  GREP_OPTIONS="--exclude-dir=.deps $GREP_OPTIONS"
-  GREP_OPTIONS="--exclude-dir=.libs $GREP_OPTIONS"
-fi
-if grep --help | grep -q -- --color; then
-  GREP_OPTIONS="--color=auto $GREP_OPTIONS"
-fi
 
 # Git だろうと Mercurial だろうと、ブランチ名をzshのプロンプトにスマートに表示する方法
 # http://d.hatena.ne.jp/mollifier/20090814/p1
