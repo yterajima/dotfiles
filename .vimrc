@@ -81,7 +81,9 @@ let php_sql_query=1     "文字列中のSQLをハイライト
 command! Sudow :w !sudo tee >/dev/null %
 
 "既に開いているファイルを再度開かない
-runtime macros/editexisting.vim
+if filereadable("macros/editexisting.vim")
+  runtime macros/editexisting.vim
+endif
 
 "英字キーボード用
 noremap ; :
