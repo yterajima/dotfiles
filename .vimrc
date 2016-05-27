@@ -1,3 +1,5 @@
+".vimrc for e2esound
+
 "set verbosefile=~/vimlog
 syntax on
 filetype indent on
