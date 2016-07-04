@@ -3,8 +3,10 @@ typeset -U path
 # export NODEBREW_ROOT="$HOME/.nodebrew"
 
 # rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then
+  export PATH=$HOME/.rbenv/bin:$PATH
+  eval "$(rbenv init -)"
+fi
 
 # composer
 if which composer > /dev/null; then
@@ -12,7 +14,7 @@ if which composer > /dev/null; then
 fi
 
 # Go
-if [ -x "`which go`" ]; then
+if [ ! -n "$GOPATH" ] && [ -x "`which go`" ]; then
   export GOROOT=`go env GOROOT`
   export GOPATH=$HOME/.go
   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
