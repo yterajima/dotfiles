@@ -17,5 +17,8 @@ fi
 if [ ! -n "$GOPATH" ] && [ -x "`which go`" ]; then
   export GOROOT=`go env GOROOT`
   export GOPATH=$HOME/.go
+fi
+
+if [ -x "`which go`" ]; then
   export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
