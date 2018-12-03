@@ -1,7 +1,9 @@
-#!/usr/bin/env ruby 
-# coding: utf-8
-
+#!/usr/bin/env ruby
 ps_result = `ps aux | grep middleman`
 if /\/bin\/middleman/ =~ ps_result
-  print " MM "
+  if /\/wiki\// =~ ps_result
+    print " MW "
+  else
+    print " MM "
+  end
 end
