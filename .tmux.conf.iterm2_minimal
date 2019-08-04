@@ -1,0 +1,94 @@
+# key-mode
+set-window-option -g mode-keys vi
+# set-window-option -g utf8 on
+set-window-option -g automatic-rename on
+
+# prefix:C-e
+set-option -g prefix C-e
+unbind-key C-b
+bind-key C-z send-prefix
+
+unbind C-n
+bind-key C-n next-window
+
+# マウスクリックでペイン選択
+# set-option -g mouse-select-pane on
+# マウスでペインサイズ変更
+# set-option -g mouse-resize-pane on
+
+# View
+
+# index start=1
+set-option -g base-index 1
+# index 振り直し
+set-option -g renumber-windows on
+
+
+set-option -g default-terminal screen-256color
+set -g status-interval 5
+#set -g status-bg white
+#set -g status-fg black
+set -g status-bg black
+set -g status-fg white
+#scroll
+#set-window-option -g mode-mouse on
+set -g history-limit 5000
+
+# Color Setting
+set -g message-style fg=white,bg=black,default
+set -g pane-border-style fg=green,bg=black
+set -g pane-active-border-style fg=green,bg=black
+# set -g window-status-style fg=black,bg=white
+set -g window-status-style fg=colour245,bg=black
+setw -g window-status-current-style fg=green,bg=black
+
+# Resize Pane
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# Move Page
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+
+# Split Pane
+bind \ split-window -hc "#{pane_current_path}"
+bind - split-window -vc "#{pane_current_path}"
+
+# Open new Tab
+bind 'c' new-window -c "#{pane_current_path}"
+
+# Display
+# Lest:whoami@hostname
+set -g status-left-length 50
+# set -g status-left "#[fg=colour160,bold] #(whoami)@#h #[default]"
+set -g status-left "#[fg=colour160,bold] #(whoami)@#h #[default]"
+set -g status-right "sess:#S"
+
+# alias
+bind z kill-pane
+bind i display-panes
+bind r source-file ~/.tmux.conf
+set-option -g display-panes-time 10000
+
+# Copy
+bind y copy-mode
+bind p paste-buffer
+
+unbind-key -T copy-mode-vi Space
+unbind-key -T copy-mode-vi Enter
+unbind-key -T copy-mode-vi C-v
+unbind-key -T copy-mode-vi [
+unbind-key -T copy-mode-vi ]
+
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+bind-key -T copy-mode-vi Y send-keys -X copy-line
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+
+# for vim register
+set-option -g default-command "reattach-to-user-namespace -l $SHELL"
