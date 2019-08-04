@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+# gitignore を取得する
+function _curl-git-ignore() { curl -s http://www.gitignore.io/api/$1 ;}
+
+local SELECTED="$(_curl-git-ignore list | gsed "s/,/\n/g" | peco)"
+_curl-git-ignore $SELECTED > .gitignore

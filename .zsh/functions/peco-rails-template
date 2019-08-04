@@ -1,0 +1,35 @@
+#!/bin/zsh
+
+# GitHub API からテンプレート情報取得
+local JSON=$(curl --silent https://api.github.com/repos/fillin-inc/templates/contents/rails | jq '.[]')
+
+# template 名から選択
+local TEMPLATE=$(echo ${JSON} | jq '.name' | grep '.rb' | sed -e 's/"//g' | sed -e 's/\.rb$//' | peco)
+if [ -z ${TEMPLATE} ]; then
+  echo "template が取得できませんでした"
+  return 1
+fi
+
+# name が該当する download_url 取得
+local SELECTED=$(echo ${JSON} | jq ". | select (.name == \"${TEMPLATE}.rb\") | .download_url" | sed -e 's/"//g')
+if [ -z ${SELECTED} ]; then
+  echo "選択された template に該当する download_url が取得できませんでした"
+  return 1
+fi
+
+# git 管理されていない場合, 空 commit
+if [ -d .git ]; then
+  git init
+  git commit --allow-empty -m "initial commit"
+fi
+
+# Gemfile が存在しない場合デフォルト適用
+if [ ! -f "Gemfile" ]; then
+  curl -O --silent https://raw.githubusercontent.com/fillin-inc/templates/master/rails/example/Gemfile
+fi
+
+# rails gem を install
+bundle i --without production
+
+# template 指定で new
+bundle exec rails new . --force -d mysql -m ${SELECTED}

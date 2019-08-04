@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# github api からテンプレート情報取得
+local JSON=$(curl --silent https://api.github.com/repos/fillin-inc/templates/contents/docker-compose | jq '.[]')
+
+# template 名から選択
+local TEMPLATE=$(echo ${JSON} | jq '.name' | grep '.yml' | sed -e 's/"//g' | sed -e 's/\.yml$//' | peco)
+if [ -z ${TEMPLATE} ]; then
+  echo "template が取得できませんでした"
+  return 1
+fi
+
+echo ${TEMPLATE}
+# name が該当する download_url 取得
+local SELECTED=$(echo ${JSON} | jq ". | select (.name == \"${TEMPLATE}.yml\") | .download_url" | sed -e 's/"//g')
+if [ -z ${SELECTED} ]; then
+  echo "選択された template に該当する download_url が取得できませんでした"
+  return 1
+fi
+
+curl -o docker-compose.yml --silent ${SELECTED}

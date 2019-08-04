@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+if [ -n "$TMUX" ]; then
+  # attach されているものは除外
+  local SELECTED="$(tmux list-sessions | grep -v \(attached\) | peco | cut -d : -f 1)"
+  tmux switch-client -t $SELECTED
+else
+  local SELECTED="$(tmux list-sessions | peco | cut -d : -f 1)"
+  tmux attach -t $SELECTED
+fi

@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+# `ps aux` から選択した process を kill する
+ps ax -o pid,lstart,command | peco --query "$LBUFFER" | awk '{print $1}' | xargs kill -TERM
