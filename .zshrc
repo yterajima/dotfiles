@@ -67,14 +67,7 @@ setopt nolistbeep
 
 
 ## Keybind configuration
-#
-# emacs like keybind (e.x. Ctrl-a gets to line head and Ctrl-e gets
-#   to end) and something additions
-#
 bindkey -v
-bindkey "^[[1~" beginning-of-line # Home gets to line head
-bindkey "^[[4~" end-of-line # End gets to line end
-bindkey "^[[3~" delete-char # Del
 
 # historical backward/forward search with linehead string binded to ^P/^N
 #
@@ -125,12 +118,6 @@ autoload zed
 #
 setopt complete_aliases     # aliased ls needs if file/dir completions work
 
-alias rb='rbenv'
-alias be='bundle exec'
-alias bu='bundle update'
-alias bi='bundle install'
-alias task='task'
-alias where="command -v"
 alias j="jobs -l"
 
 case "${OSTYPE}" in
@@ -146,15 +133,8 @@ alias la="ls -a"
 alias lf="ls -F"
 alias ll="ls -l"
 alias lt="ls -t"
-
-alias du="du -h"
-alias df="df -h"
-
 alias su="su -l"
 
-alias cl="clear"
-
-alias tmuxlist="tmux list-sessions"
 
 ## terminal configuration
 #
